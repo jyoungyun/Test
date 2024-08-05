@@ -16,7 +16,7 @@ jobs:
       - name: Get commit message
         if: github.event_name == 'push'
         run: |
-          echo ${{ github.event.head_commit.message }} > commit_msg.txt
+          echo "${{ github.event.head_commit.message }}" > commit_msg.txt
       - name: Get commit message
         if: github.event_name == 'pull_request'
         run: |
